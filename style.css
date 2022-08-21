@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400&family=Sen:wght@400;700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin:auto;
+}
+
+/* navbar style */
+
+.navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding:30px 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    transition:  all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding:15px 0;
+    background: rgb(14,58,84);
+    background: linear-gradient(90deg, rgba(14,58,84,1) 0%, rgba(75,184,237,1) 50%, rgba(14,58,84,1) 100%);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+
+.navbar .logo img{
+    height: 60px;
+    margin-right: 60px;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    color:#fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left:25px;
+    transition: color 0.3s ease;
+    letter-spacing: 1.8px;
+}
+
+.navbar .menu li a:hover{
+    color: rgba(108, 183, 245, 0.9);
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+/* menu btn style  */
+
+.menu-btn{
+    color:#fff;
+    font-size:23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* home-section */
+
+.home {
+    display: flex;
+    background: url("img/top-1.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color:#fff;
+    min-height: 500px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    letter-spacing: 3px;
+}
+
+.home .home-content .text-3{
+    font-size: 40px;
+    margin:5px 0;
+}
+
+.home .home-content .text-2 span{
+    color: rgb(17, 162, 219);
+    font-weight: 600;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: rgba(3, 102, 141, 0.9);
+    color:#fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(17, 162, 219);
+    transition: all 0.3s ease;
+}
+
+
+.home .home-content a:hover {
+    color: rgb(17, 162, 219);
+    background: none;
+}
+
+/* all similar styling codes  */
+
+section{
+    padding: 100px 0;
+}
+
+.about, .photography, .video, .connect-container, .signature  {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.about .about-content,
+.photography .photo-content,
+.drone-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Sen', sans-serif;
+}
+
+
+ section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 230px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+
+/* about section style */
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.about .about-content .right .text span {
+    color:rgb(17, 162, 219);
+}
+
+.about .about-content .right p {
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 20px;
+}
+
+
+/* photography section */
+
+.photography {
+    color: #fff;
+    background: #111;
+}
+
+.photography .photo-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor:pointer;
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card:hover {
+    background:rgb(1, 24, 32)
+}
+
+.photography .photo-content .card .box {
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.photography .photo-content .card .box .transparent {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 6px;
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card .box .one:hover {
+    content:url('img/photography/SALE.png');
+    width: 100%;
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card .box .two:hover {
+    content:url('img/photography/SALE\ \(2\).png');
+    width: 100%;
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card .box .three:hover {
+    content:url('img/photography/WhatsApp\ Image\ 2022-08-21\ at\ 5.08.32\ PM.jpeg');
+    width: 100%;
+    transition: all 0.3 ease;
+}
+
+.photography .photo-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+
+/* video section style */
+
+
+
+.drone-content .left{
+    width: 55%;
+}
+
+
+.drone-content .right {
+    width: 45%;
+}
+
+.drone-content .right img {
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    float: right;
+}
+
+
+.drone-content .left p {
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 20px;
+}
+
+.drone-content .left p span {
+    color:rgba(18, 98, 129, 0.9);
+    text-shadow: 1px 1px 2px rgba(78, 199, 247, 0.5);
+}
+
+
+.video #title-description {
+    width: 80%; 
+    text-align: center;
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 110px auto 60px;
+    letter-spacing: 4px;
+}
+
+
+.video #title-description span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+
+
+ .video {
+     max-width: 1400px;
+     margin:auto;
+ }
+
+ .video-content {
+     margin-left: 40px;
+     margin-right: 40px;
+ }
+
+  .video-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+  }
+
+  .video-column {
+    min-width: 400px;
+    margin-bottom: 50px;
+    width: 45%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: bottom;
+    margin-right: 20px;
+  }
+
+ 
+  .video-column  iframe{
+      width: 100%;
+      height: auto;
+      min-height: 300px;
+  }
+
+
+  .video-row .video-column p {
+      margin-top: 5px;
+      color: rgb(0, 0, 0,0.6);
+      text-align: center;
+  }
+
+  
+/*   contact-iletisim section */
+
+.background {
+    position: relative;
+    display: flex;
+    margin:0;
+}
+
+.background video {
+    position: relative;
+    z-index:0;
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(37, 37, 37,0.6);
+  }
+
+
+ .connect-container{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    left:0;
+    display: flex;
+    margin: 100px 0 0px;
+    padding: 20px;
+    line-height: 30px;
+    color:white;
+    width: 60%;
+}
+
+.contact .connect-container .address{
+    width: 50%;
+    margin-right: 40px;
+    margin-top:70px;
+}
+
+.contact .connect-container .address h3{
+    font-size:1.2em;
+    padding: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.contact .connect-container .address a{
+    color:#fff;
+}
+
+
+.contact .connect-container .address a:hover{
+    letter-spacing: 2px;
+    transition: all .3s ease-in;
+}
+
+
+.contact .connect-container .address .icon-type{
+   margin:5px;
+}
+
+
+.contact .connect-container .address .icon-type img{
+    margin-right: 10px;
+    width: 30px;
+}
+
+
+.contact .connect-container .address .icon-type span{
+    font-size: 1em;
+}
+
+
+.contact .connect-container .follow {
+    margin-left: 50px;
+    margin-top:70px;
+    width: 50%;
+}
+
+
+
+.contact .connect-container .follow  h3{
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.contact .connect-container .follow .social {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .connect-container .follow .social li{
+    display: inline-block;
+    filter: contrast(120%);
+    margin-right: 30px;
+    transform: scale(0.9);
+    transition: 0.5s;
+    padding: 8px;
+}
+
+.contact .connect-container .follow .social li img {
+    width: 50px;
+}
+
+
+
+.contact .connect-container .follow .social li:hover {
+    transform: scale(0.9) translateY(-15px);
+}
+
+
+.contact .background .signature {
+    position: absolute;
+    z-index: 2;
+    bottom:10px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size:1em;
+    letter-spacing: 2px;
+}
+
+.contact .background .signature p {
+    color:#fff;
+}
+
+.contact .background .signature a {
+    color:#fff;
+}
+
+
+
+/* responsive media query  start */
+
+
+@media(max-width: 1300px){
+    .home .max-width {
+        margin-left:0;  
+    }
+}
+
+@media(max-width: 1140px) {
+    .contact .connect-container .address {
+        min-width: 220px;
+    }
+
+    .video-row .video-column p {
+        margin-top: -10px;
+    }
+}
+
+
+@media(max-width: 1104px){
+    .about .about-content .left img {
+        height: 370px;
+        width: 300px;
+    }
+
+
+    .drone-content .right img {
+        height: 370px;
+        width: 300px;
+    }
+
+    .video-column  iframe{
+        width: 100%;
+        height: auto;
+    }
+
+    .contact .connect-container .address .icon-type span{
+        font-size: 0.9em;
+    }
+    
+
+
+
+
+}
+
+@media(max-width: 991px){
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .video-row .video-column p {
+        margin-top: -20px;
+    }
+
+
+}
+
+@media(max-width: 947px ){
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left:-100%;
+        top:0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 70px;
+
+    }
+    
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+
+    .max-width {
+        max-width: 800px;
+    }
+
+    .about .about-content .column{
+        width: 100%;
+    }
+
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .photography .photo-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .drone-content .column{
+        width: 100%;
+    }
+
+    .drone-content .right{
+        display: flex;
+        justify-content: center;
+        margin: 60px auto 0;
+    }
+
+    .drone-content .left {
+        flex: 100%;
+    }
+
+    .video-column {
+        width: 100%;
+        max-width: 650px;
+        margin-bottom: 60px;
+      }
+
+    .video-row .video-column p {
+        margin-top: 5px;
+    }
+
+
+    .contact .follow .social li img {
+        max-width: 38px;
+        }
+
+
+}
+
+@media (max-width: 700px) {
+    
+    .address h3 {
+      font-size: 1.3em;
+    }
+  
+  
+    .icon-type span{
+      font-size: 0.9em;
+  }
+
+  .follow  h3 {
+    font-size: 1em;
+  }
+  
+
+  .contact .follow .social li {
+      display: block;
+      margin-right: 4px;
+  }
+
+  .contact .follow .social li img {
+    max-width: 30px;
+    }
+
+  .contact .connect-container .address .icon-type img {
+        width: 20px;
+  }  
+
+  .contact .connect-container .address a {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width:690px){
+    .max-width {
+        padding: 0 23px; 
+    }
+
+
+    .home .home-content .text-2{
+        font-size: 60px;
+
+    }
+    
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+
+    .home .home-content a{
+        font-size: 20px;
+    }
+
+    .photography .photo-content .card {
+        width: 100%;
+    }
+
+    .contact .background .signature p {
+        font-size: 0.8em;
+    }   
+
+
+}
+
+
+@media (max-width:600px) {
+    .video-row .video-column p {
+        margin-top: -5px;
+    }
+
+}
+
+@media (max-width:500px){
+        .max-width {
+            padding: 0 23px; 
+        }
+    
+    
+        .home .home-content .text-2{
+            font-size: 50px;
+    
+        }
+        
+        .home .home-content .text-3{
+            font-size: 27px;
+        }
+
+        .video-row .video-column p {
+            margin-top: -25px;
+        }
+
+        .connect-container .address .icon-type img {
+            width: 18px;
+        }
+    }
+
+
+/* --mobile version-- */
+
+    @media (max-width:420px){
+        .video {
+            max-width: 380px;
+            margin:auto;
+        }
+       
+        .video-content {
+            margin-left: 15px;
+            margin-right: 5px;
+        }
+
+        .video-column {
+            min-width: 330px;
+            margin-bottom: 10px;
+          }
+        
+         
+          .video-column  iframe{
+              width: 100%;
+              height: auto;
+              min-height: 280px;
+          }
+        
+        
+          .video-row .video-column p {
+              margin-top: -40px;
+          }
+
+          .contact .connect-container .address{
+            width: 40%;
+            margin-right: 40px;
+            margin-top:-60px;
+        }
+        
+        .contact .connect-container .address h3{
+            font-size:1.1em;
+            padding: 5px;
+            margin-bottom: 0px;
+        }
+
+        .contact .connect-container .follow {
+            margin-left: -110px;
+            margin-top:100px;
+            width: 50%;
+        }
+
+        
+        .contact .connect-container .follow  h3{
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact .connect-container .follow .social li {
+            padding:2px;
+        }
+
+        .contact .connect-container .follow .social li img {
+            width: 35px;
+        }
+
+    }
